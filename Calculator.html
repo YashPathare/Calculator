@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Calculator
+        </title>
+        <link rel="stylesheet" href="Calculator.css">
+    </head>
+    <body>
+        <p class="ctitle">
+            Calculator
+        </p>
+        <p class="js-cal cal-res "></p>
+        <p>
+            <button class="but num" onclick="
+                updateCalculation('1')">
+                    1
+            </button>
+            <button class="but" onclick="
+                updateCalculation('2')">
+                    2
+            </button>
+            <button class="but" onclick="
+                updateCalculation('3')">
+                    3
+            </button>
+            <button class="but op" onclick="
+            updateCalculation('+')">
+                    +
+            </button>
+        </p>
+        <p>
+            <button class="but" onclick="
+                updateCalculation('4')">
+                    4
+            </button>
+            <button class="but" onclick="
+                updateCalculation('5')">
+                    5
+            </button>
+            <button class="but" onclick="
+                updateCalculation('6')">
+                    6
+            </button>
+            <button class="but op" onclick="
+                updateCalculation('-')">
+                   -
+            </button>
+        </p>
+        <p>
+            <button class="but" onclick="
+                updateCalculation('7')">
+                    7
+            </button>
+            <button class="but" onclick="
+                updateCalculation('8')">
+                    8
+            </button>
+            <button class="but" onclick="
+               updateCalculation('9')">
+                    9
+            </button>
+            <button class="but op" onclick="
+                updateCalculation('*')">
+                    *
+            </button>
+        </p>
+        <p>
+            <button class="but" onclick="
+                updateCalculation('0')">
+                    0
+            </button>
+            <button class="but" onclick="
+                updateCalculation('.')">
+                    .
+            </button>
+            <button class="but" onclick="
+                calculation = eval(calculation).toString();
+                displayCalculation();
+                localStorage.setItem('calculation', calculation);
+            ">
+                =
+            </button>
+
+            <button class="but op" onclick="
+                updateCalculation('/')">
+                    /
+            </button>
+        </p>
+        <button class="but clear" onclick="
+            calculation='';
+            displayCalculation();
+            localStorage.setItem('calculation', calculation);">
+            Clear
+        </button>
+        <button class="but clear" onclick="backButton();">
+    Back
+</button>
+
+        <script src="Calculator.js">
+        </script>
+    </body>
+</html>
